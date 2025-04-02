@@ -1,0 +1,16 @@
+services:
+  slow-server:
+    image: slow-server:latest
+    deploy:
+      replicas: 3
+    expose:
+      - "80"
+
+  caddy:
+    image: caddy:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+    depends_on:
+      - slow-server

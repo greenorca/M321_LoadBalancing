@@ -1,0 +1,5 @@
+http://localhost {
+    reverse_proxy slow-server:80 {
+        lb_policy round_robin
+    }
+}
