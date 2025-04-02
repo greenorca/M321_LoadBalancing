@@ -18,13 +18,13 @@
 ### demonstrate slow responses for multiple connections
 
 ```
-sven@xub2204-m169:~$ time curl localhost &
+demo@xub2204-m169:~$ time curl localhost &
 [1] 34639
-sven@xub2204-m169:~$ time curl localhost &
+demo@xub2204-m169:~$ time curl localhost &
 [2] 34641
-sven@xub2204-m169:~$ time curl localhost &
+demo@xub2204-m169:~$ time curl localhost &
 [3] 34645
-sven@xub2204-m169:~$ Hello, here is a response from Server IP: 172.17.0.2
+demo@xub2204-m169:~$ Hello, here is a response from Server IP: 172.17.0.2
 
 real	0m5.016s
 user	0m0.004s
@@ -48,11 +48,11 @@ sys	0m0.003s
 ### demonstrate load balancing speedup for multiple connections
 
 ```
-sven@xub2204-m169:~$ time curl localhost &
+demo@xub2204-m169:~$ time curl localhost &
 [5] 35383
-sven@xub2204-m169:~$ time curl localhost &
+demo@xub2204-m169:~$ time curl localhost &
 [6] 35386
-sven@xub2204-m169:~$ Hello, here is a response from Server IP: 172.19.0.4
+demo@xub2204-m169:~$ Hello, here is a response from Server IP: 172.19.0.4
 
 real	0m5.009s
 user	0m0.000s
